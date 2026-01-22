@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Arnika Akre Slides - AI Document to Web Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            -webkit-font-smoothing: antialiased; 
+            overscroll-behavior-y: none;
+        }
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        
+        .perspective-1000 { perspective: 1000px; }
+        
+        /* Mobile-specific workspace layout */
+        @media (max-width: 768px) {
+            .mobile-workspace {
+                display: flex;
+                flex-direction: column;
+                height: 100dvh;
+            }
+            .mobile-preview {
+                height: 35vh;
+                min-height: 250px;
+                flex-shrink: 0;
+                background: #f8fafc;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            .mobile-controls {
+                flex: 1;
+                height: 65vh;
+                overflow: hidden;
+            }
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @media print {
+            body { background: white !important; overflow: visible !important; }
+            #root > div:not(.print-container) { display: none !important; }
+            .print-container { display: block !important; }
+            .slide-page { page-break-after: always; min-height: 100vh; width: 100vw; }
+        }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+        "pptxgenjs": "https://esm.sh/pptxgenjs@3.12.0"
+      }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 overflow-hidden">
+    <div id="root"></div>
+</body>
+</html>
